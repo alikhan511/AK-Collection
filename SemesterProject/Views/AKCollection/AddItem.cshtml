@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "AddItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <head>
+        <title>Insert Products</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Colo Shop Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/styles/bootstrap4/bootstrap.min.css">
+        <link href="~/Scripts/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/plugins/OwlCarousel2-2.2.1/animate.css">
+        <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/styles/contact_styles.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/styles/contact_responsive.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/styles/main_styles.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/styles/responsive.css">
+        <link rel="stylesheet" type="text/css" href="~/Scripts/css_files/stylishadmin.css">
+        <script type="text/javascript">
+            function letternumber(event) {
+                var keychar;
+                keychar = event.key;
+                // alphas and numbers
+                if (((".+-0123456789").indexOf(keychar) > -1))
+                    return true;
+                else
+                    return false;
+            }
+        </script>>
+    </head>
+
+<body>
+    <div class="main_nav_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <div class="logo_container">
+                        <a href="#">A.K<span> Online Collection</span></a>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="navbar_menu">
+                            <li><a href="/AKCollection/Index">Home</a></li>
+                            <li><a href="/AKCollection/AddItem">Add Item</a></li>
+
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact_container">
+        <div class="loginbox11">
+            <img src="~/Scripts/css_files/Login.png" class="avatar">
+            <h1>Insert Products</h1>
+            <form method="POST" action="/AKCollection/Add">
+                <p>Brand Name</p>
+                <input name="brandName" placeholder="Enter Brand Name" type="text" required />
+                <p>Product Code</p>
+                <input name="productCode" placeholder="Enter Product Code" type="text" required>
+                <p>Product Size</p>
+                <input name="size" placeholder="Enter Product Size"  type="text" required>
+                <p>Product Colour</p>
+                <input name="color" placeholder="Enter Product Colour" type="text" required>
+                <p>Product Description</p>
+                <input name="description" placeholder="Enter Product Description" type="text" required>
+                <p>Product Price</p>
+                <input name="price" placeholder="Enter Product Price" onkeypress="return letternumber(event)" type="text" required>
+
+                <input type="submit" name="insert" value="Save Product" required>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/styles/bootstrap4/popper.js"></script>
+    <script src="~/Scripts/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Scripts/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Scripts/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Scripts/plugins/easing/easing.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+    <script src="~/Scripts/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="~/Scripts/js/contact_custom.js"></script>
+</body>
